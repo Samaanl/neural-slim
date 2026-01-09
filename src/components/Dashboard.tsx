@@ -247,24 +247,14 @@ export default function Dashboard() {
                 <div className="flex items-center gap-1.5 sm:gap-2 bg-orange-50 border border-orange-200 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full">
                   <Flame className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-orange-500" />
                   <span className="text-orange-700 font-medium text-xs sm:text-sm">
-                    {streakData.currentStreak} day{streakData.currentStreak > 1 ? 's' : ''}
+                    {streakData.currentStreak} day
+                    {streakData.currentStreak > 1 ? "s" : ""}
                   </span>
                 </div>
               )}
               <div className="flex items-center gap-1.5 sm:gap-2 bg-gray-100 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full">
                 <span className="text-gray-600 text-xs sm:text-sm font-medium">
                   Lvl {streakData?.level || 1}
-                </span>
-              </div>
-            </div>
-          </div>
-        </header>
-                  </span>
-                </div>
-              )}
-              <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-full">
-                <span className="text-gray-600 text-sm font-medium">
-                  Level {streakData?.level || 1}
                 </span>
               </div>
             </div>
@@ -409,7 +399,9 @@ export default function Dashboard() {
                 alt="NeuralSlim Logo"
                 className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg object-contain"
               />
-              <span className="font-semibold text-gray-600 text-sm sm:text-base">NeuralSlim</span>
+              <span className="font-semibold text-gray-600 text-sm sm:text-base">
+                NeuralSlim
+              </span>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
               <button
