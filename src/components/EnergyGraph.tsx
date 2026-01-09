@@ -271,13 +271,17 @@ export default function EnergyGraph({
               <phaseInfo.icon className="w-4 h-4 sm:w-5 sm:h-5" />
               {phaseInfo.title}
             </p>
-            <p className={`text-${phaseInfo.color}-700 text-xs sm:text-sm mt-1`}>
+            <p
+              className={`text-${phaseInfo.color}-700 text-xs sm:text-sm mt-1`}
+            >
               {phaseInfo.description}
             </p>
           </div>
           <div className="text-left sm:text-right">
             <p className="text-xs text-gray-500">Phase</p>
-            <p className={`text-xl sm:text-2xl font-bold text-${phaseInfo.color}-600`}>
+            <p
+              className={`text-xl sm:text-2xl font-bold text-${phaseInfo.color}-600`}
+            >
               {phaseInfo.phase}/6
             </p>
           </div>
@@ -291,8 +295,12 @@ export default function EnergyGraph({
           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-1 sm:mb-2">
             <Target className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
           </div>
-          <p className="text-2xl sm:text-3xl font-bold text-emerald-600">{daysCompleted}</p>
-          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">Days Completed</p>
+          <p className="text-2xl sm:text-3xl font-bold text-emerald-600">
+            {daysCompleted}
+          </p>
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">
+            Days Completed
+          </p>
         </div>
 
         {/* Current Streak */}
@@ -300,8 +308,12 @@ export default function EnergyGraph({
           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-1 sm:mb-2">
             <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600" />
           </div>
-          <p className="text-2xl sm:text-3xl font-bold text-orange-600">{currentStreak}</p>
-          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">Day Streak</p>
+          <p className="text-2xl sm:text-3xl font-bold text-orange-600">
+            {currentStreak}
+          </p>
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">
+            Day Streak
+          </p>
         </div>
 
         {/* Days to Next Phase */}
@@ -325,7 +337,9 @@ export default function EnergyGraph({
           <p className="text-2xl sm:text-3xl font-bold text-purple-600">
             {habitProgress.toFixed(0)}%
           </p>
-          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">Journey Complete</p>
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">
+            Journey Complete
+          </p>
         </div>
       </div>
 
@@ -335,7 +349,9 @@ export default function EnergyGraph({
           <span className="text-xs sm:text-sm font-medium text-gray-700">
             Full Transformation Progress
           </span>
-          <span className="text-xs sm:text-sm text-gray-500">{daysCompleted}/90 days</span>
+          <span className="text-xs sm:text-sm text-gray-500">
+            {daysCompleted}/90 days
+          </span>
         </div>
         <div className="h-3 sm:h-4 bg-gray-100 rounded-full overflow-hidden">
           <motion.div

@@ -46,7 +46,9 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
               alt="NeuralSlim Logo"
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl object-contain"
             />
-            <span className="text-lg sm:text-xl font-bold text-gray-900">NeuralSlim</span>
+            <span className="text-lg sm:text-xl font-bold text-gray-900">
+              NeuralSlim
+            </span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-gray-600">
             <Link
@@ -80,7 +82,11 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -116,7 +122,10 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
                   The Science
                 </Link>
                 <button
-                  onClick={() => { setMobileMenuOpen(false); onStart(); }}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onStart();
+                  }}
                   className="w-full mt-2 flex items-center justify-center gap-2 px-5 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
                 >
                   Get Started <ArrowRight className="w-4 h-4" />
@@ -140,7 +149,10 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
             <span>Trusted by 50,000+ users</span>
             <div className="flex items-center gap-0.5 text-amber-500">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} className="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-current" />
+                <Star
+                  key={i}
+                  className="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-current"
+                />
               ))}
             </div>
           </motion.div>
@@ -258,14 +270,18 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
                   <TrendingDown className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
                 </div>
                 <div>
-                  <p className="text-gray-500 text-xs sm:text-sm">Your Progress</p>
+                  <p className="text-gray-500 text-xs sm:text-sm">
+                    Your Progress
+                  </p>
                   <p className="text-gray-900 font-semibold text-sm sm:text-base">
                     Weight Loss Journey
                   </p>
                 </div>
               </div>
               <div className="text-left sm:text-right">
-                <p className="text-xl sm:text-2xl font-bold text-emerald-600">-12 lbs</p>
+                <p className="text-xl sm:text-2xl font-bold text-emerald-600">
+                  -12 lbs
+                </p>
                 <p className="text-gray-500 text-xs sm:text-sm">in 30 days</p>
               </div>
             </div>
@@ -397,7 +413,10 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="relative z-10 bg-gray-50 py-16 sm:py-24">
+      <section
+        id="testimonials"
+        className="relative z-10 bg-gray-50 py-16 sm:py-24"
+      >
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
             <p className="text-emerald-600 font-semibold text-xs sm:text-sm uppercase tracking-wider mb-2 sm:mb-3">
@@ -467,7 +486,10 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
                 </p>
                 <div className="flex mt-3 sm:mt-4 text-amber-400">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-3.5 sm:w-4 h-3.5 sm:h-4 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-3.5 sm:w-4 h-3.5 sm:h-4 fill-current"
+                    />
                   ))}
                 </div>
               </motion.div>
@@ -521,7 +543,9 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
                   <item.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1 text-sm sm:text-base">{item.title}</h4>
+                  <h4 className="font-semibold mb-1 text-sm sm:text-base">
+                    {item.title}
+                  </h4>
                   <p className="text-emerald-100 text-xs sm:text-sm leading-relaxed">
                     {item.desc}
                   </p>
@@ -554,7 +578,8 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
           onClick={onStart}
           className="px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-base sm:text-lg shadow-lg shadow-emerald-500/25 inline-flex items-center gap-2"
         >
-          Start Now — It&apos;s Free <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
+          Start Now — It&apos;s Free{" "}
+          <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
         </motion.button>
       </section>
 
@@ -567,7 +592,9 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
               alt="NeuralSlim Logo"
               className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg object-contain"
             />
-            <span className="font-semibold text-gray-700 text-sm sm:text-base">NeuralSlim</span>
+            <span className="font-semibold text-gray-700 text-sm sm:text-base">
+              NeuralSlim
+            </span>
           </div>
           <p className="text-gray-500 text-xs sm:text-sm max-w-md">
             Results are simulated for motivational purposes. This is a wellness

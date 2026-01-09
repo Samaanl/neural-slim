@@ -171,7 +171,9 @@ export default function BadgesDisplay({ badges }: BadgesDisplayProps) {
                 }`}
               >
                 {isUnlocked ? (
-                  <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${colorClasses[0]}`} />
+                  <IconComponent
+                    className={`w-5 h-5 sm:w-6 sm:h-6 ${colorClasses[0]}`}
+                  />
                 ) : (
                   <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
                 )}
@@ -183,7 +185,9 @@ export default function BadgesDisplay({ badges }: BadgesDisplayProps) {
               >
                 {badge.title}
               </p>
-              <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1 line-clamp-2">{badge.description}</p>
+              <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1 line-clamp-2">
+                {badge.description}
+              </p>
             </motion.div>
           );
         })}

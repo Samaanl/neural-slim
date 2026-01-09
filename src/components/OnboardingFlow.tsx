@@ -320,7 +320,8 @@ export default function OnboardingFlow({ onComplete }: OnboardingFlowProps) {
                   onClick={handleNext}
                   className="flex-1 py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-base sm:text-lg flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/25"
                 >
-                  Start My Journey <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                  Start My Journey{" "}
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </motion.button>
               </div>
             </motion.div>

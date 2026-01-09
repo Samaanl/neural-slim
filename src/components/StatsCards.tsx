@@ -72,7 +72,9 @@ export default function StatsCards({
             {stat.value}
             <span className="text-base sm:text-xl">{stat.suffix}</span>
           </p>
-          <p className="text-gray-500 text-xs sm:text-sm mt-0.5 sm:mt-1">{stat.label}</p>
+          <p className="text-gray-500 text-xs sm:text-sm mt-0.5 sm:mt-1">
+            {stat.label}
+          </p>
         </motion.div>
       ))}
     </div>

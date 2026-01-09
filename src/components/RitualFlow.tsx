@@ -225,11 +225,16 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
                 { icon: Target, label: "Focus" },
                 { icon: Zap, label: "Activate" },
               ].map((s, i) => (
-                <div key={i} className="flex flex-col items-center gap-1.5 sm:gap-2">
+                <div
+                  key={i}
+                  className="flex flex-col items-center gap-1.5 sm:gap-2"
+                >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center">
                     <s.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
                   </div>
-                  <span className="text-xs sm:text-sm text-gray-500">{s.label}</span>
+                  <span className="text-xs sm:text-sm text-gray-500">
+                    {s.label}
+                  </span>
                 </div>
               ))}
             </div>
@@ -256,7 +261,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
           >
             <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
               <Wind className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
-              <p className="text-gray-500 font-medium text-sm sm:text-base">Step 1 of 3</p>
+              <p className="text-gray-500 font-medium text-sm sm:text-base">
+                Step 1 of 3
+              </p>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
               Oxygen Activation
@@ -329,7 +336,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               >
                 <div className="text-center text-white">
                   <p className="text-3xl sm:text-4xl font-bold">{timer}</p>
-                  <p className="text-xs sm:text-sm opacity-90">{getBreathInstruction()}</p>
+                  <p className="text-xs sm:text-sm opacity-90">
+                    {getBreathInstruction()}
+                  </p>
                 </div>
               </motion.div>
             </div>
@@ -362,12 +371,16 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
           >
             <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
               <Target className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
-              <p className="text-gray-500 font-medium text-sm sm:text-base">Step 2 of 3</p>
+              <p className="text-gray-500 font-medium text-sm sm:text-base">
+                Step 2 of 3
+              </p>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
               Neural Pathway Activation
             </h2>
-            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">Visualize your transformation</p>
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+              Visualize your transformation
+            </p>
 
             <motion.div
               animate={{
@@ -422,7 +435,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
           >
             <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
               <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
-              <p className="text-gray-500 font-medium text-sm sm:text-base">Step 3 of 3</p>
+              <p className="text-gray-500 font-medium text-sm sm:text-base">
+                Step 3 of 3
+              </p>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
               Subconscious Reprogramming
@@ -482,7 +497,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               )}
               <div className="text-center z-10">
                 <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-white mx-auto mb-1.5 sm:mb-2" />
-                <span className="text-white font-bold text-base sm:text-lg">TAP!</span>
+                <span className="text-white font-bold text-base sm:text-lg">
+                  TAP!
+                </span>
               </div>
             </motion.button>
 
