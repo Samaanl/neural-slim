@@ -224,30 +224,41 @@ export default function Dashboard() {
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
         <header className="bg-white border-b border-gray-100 sticky top-0 z-40">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div className="flex items-center gap-3">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
+            <div className="flex items-center gap-2 sm:gap-3">
               <img
                 src="/img.png"
                 alt="NeuralSlim Logo"
-                className="w-10 h-10 rounded-xl object-contain"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl object-contain"
               />
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-lg sm:text-xl font-bold text-gray-900">
                 NeuralSlim
               </span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={() => setShowHowItWorks(true)}
-                className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors text-sm"
+                className="flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 text-gray-600 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors text-xs sm:text-sm"
               >
                 <HelpCircle className="w-4 h-4" />
                 <span className="hidden sm:inline">How it works</span>
               </button>
               {streakData && streakData.currentStreak > 0 && (
-                <div className="flex items-center gap-2 bg-orange-50 border border-orange-200 px-4 py-2 rounded-full">
-                  <Flame className="w-4 h-4 text-orange-500" />
-                  <span className="text-orange-700 font-medium text-sm">
-                    {streakData.currentStreak} day streak
+                <div className="flex items-center gap-1.5 sm:gap-2 bg-orange-50 border border-orange-200 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                  <Flame className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-orange-500" />
+                  <span className="text-orange-700 font-medium text-xs sm:text-sm">
+                    {streakData.currentStreak} day{streakData.currentStreak > 1 ? 's' : ''}
+                  </span>
+                </div>
+              )}
+              <div className="flex items-center gap-1.5 sm:gap-2 bg-gray-100 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                <span className="text-gray-600 text-xs sm:text-sm font-medium">
+                  Lvl {streakData?.level || 1}
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
                   </span>
                 </div>
               )}
@@ -260,18 +271,18 @@ export default function Dashboard() {
           </div>
         </header>
 
-        <main className="max-w-6xl mx-auto px-6 py-8">
+        <main className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
           {/* Greeting */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
+            className="mb-6 sm:mb-8"
           >
-            <h1 className="text-2xl font-bold text-gray-900 mb-1">
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
               {greeting()}
               {userData?.name ? `, ${userData.name}` : ""}!
             </h1>
-            <p className="text-gray-500">
+            <p className="text-gray-500 text-sm sm:text-base">
               {ritualCompleted
                 ? "Great job! You've completed today's ritual. Come back tomorrow!"
                 : "Ready for your Daily Metabolic Ritual?"}
@@ -283,34 +294,34 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className={`mb-8 rounded-2xl p-6 border ${
+            className={`mb-6 sm:mb-8 rounded-xl sm:rounded-2xl p-4 sm:p-6 border ${
               ritualCompleted
                 ? "bg-emerald-50 border-emerald-200"
                 : "bg-white border-gray-200 shadow-sm"
             }`}
           >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-3 sm:gap-4">
                 <div
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center ${
+                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl flex items-center justify-center ${
                     ritualCompleted
                       ? "bg-emerald-100"
                       : "bg-gradient-to-br from-emerald-500 to-teal-600"
                   }`}
                 >
                   {ritualCompleted ? (
-                    <CheckCircle className="w-7 h-7 text-emerald-600" />
+                    <CheckCircle className="w-6 h-6 sm:w-7 sm:h-7 text-emerald-600" />
                   ) : (
-                    <Flame className="w-7 h-7 text-white" />
+                    <Flame className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                   )}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900">
                     {ritualCompleted
                       ? "Ritual Complete!"
                       : "Daily Metabolic Ritual"}
                   </h2>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-500 text-xs sm:text-sm">
                     {ritualCompleted
                       ? "Your neural pathways are strengthening!"
                       : "2-minute ritual to reprogram your mind"}
@@ -323,19 +334,19 @@ export default function Dashboard() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => setShowRitual(true)}
-                  className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 flex items-center gap-2"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                  Start Ritual <ArrowRight className="w-5 h-5" />
+                  Start Ritual <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
                 </motion.button>
               )}
 
               {ritualCompleted && (
                 <div className="flex items-center gap-4">
                   <div className="text-center px-4">
-                    <p className="text-2xl font-bold text-emerald-600">
+                    <p className="text-xl sm:text-2xl font-bold text-emerald-600">
                       ✓ Done
                     </p>
-                    <p className="text-gray-500 text-sm">Today</p>
+                    <p className="text-gray-500 text-xs sm:text-sm">Today</p>
                   </div>
                 </div>
               )}
@@ -343,7 +354,7 @@ export default function Dashboard() {
           </motion.div>
 
           {/* Stats Cards */}
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <StatsCards
               currentStreak={streakData?.currentStreak || 0}
               longestStreak={streakData?.longestStreak || 0}
@@ -353,7 +364,7 @@ export default function Dashboard() {
           </div>
 
           {/* Energy Graph */}
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <EnergyGraph
               data={energyHistory}
               currentStreak={streakData?.currentStreak || 0}
@@ -362,7 +373,7 @@ export default function Dashboard() {
           </div>
 
           {/* Badges */}
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <BadgesDisplay badges={streakData?.badges || []} />
           </div>
 
@@ -371,17 +382,17 @@ export default function Dashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm"
+            className="bg-white rounded-xl p-4 sm:p-6 border border-gray-100 shadow-sm"
           >
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Lightbulb className="w-5 h-5 text-amber-600" />
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600" />
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">
+                <h3 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                   Subconscious Insight
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-xs sm:text-sm">
                   {tips[Math.floor(Math.random() * tips.length)]}
                 </p>
               </div>
@@ -390,17 +401,17 @@ export default function Dashboard() {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-gray-100 mt-12 py-6 px-6 bg-white">
-          <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <footer className="border-t border-gray-100 mt-8 sm:mt-12 py-4 sm:py-6 px-4 sm:px-6 bg-white">
+          <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0">
             <div className="flex items-center gap-2">
               <img
                 src="/img.png"
                 alt="NeuralSlim Logo"
-                className="w-8 h-8 rounded-lg object-contain"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-lg object-contain"
               />
-              <span className="font-semibold text-gray-600">NeuralSlim</span>
+              <span className="font-semibold text-gray-600 text-sm sm:text-base">NeuralSlim</span>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
               <button
                 onClick={() => {
                   if (navigator.share) {
@@ -415,7 +426,7 @@ export default function Dashboard() {
               >
                 <Share2 className="w-4 h-4" />
               </button>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-xs sm:text-sm">
                 Your Daily Wellness Companion
               </p>
             </div>

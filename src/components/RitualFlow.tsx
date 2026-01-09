@@ -174,14 +174,14 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 bg-white flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-white flex items-center justify-center overflow-y-auto"
     >
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors z-10"
       >
-        <X className="w-5 h-5 text-gray-600" />
+        <X className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
       </button>
 
       <AnimatePresence mode="wait">
@@ -192,24 +192,24 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="text-center px-6 max-w-md"
+            className="text-center px-4 sm:px-6 max-w-md py-8 sm:py-0"
           >
-            <div className="w-20 h-20 mx-auto mb-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
-              <Brain className="w-10 h-10 text-white" />
+            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 sm:mb-8 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/20">
+              <Brain className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Subconscious Activation Ritual
             </h1>
-            <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+            <p className="text-gray-600 text-base sm:text-lg mb-5 sm:mb-6 leading-relaxed">
               This 2-minute neurometabolic protocol uses{" "}
               <span className="text-emerald-600 font-medium">
                 affirmation anchoring
               </span>{" "}
               to reprogram your subconscious mind for effortless weight loss.
             </p>
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-8">
-              <p className="text-emerald-800 text-sm leading-relaxed">
-                <Sparkles className="w-4 h-4 inline mr-1" />
+            <div className="bg-emerald-50 border border-emerald-200 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-6 sm:mb-8">
+              <p className="text-emerald-800 text-xs sm:text-sm leading-relaxed">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 inline mr-1" />
                 <strong>How it works:</strong> Tapping while reading
                 affirmations creates a
                 <span className="font-medium"> neuro-associative bond</span>.
@@ -219,17 +219,17 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             </div>
 
             {/* Steps preview */}
-            <div className="flex justify-center gap-4 mb-10">
+            <div className="flex justify-center gap-3 sm:gap-4 mb-8 sm:mb-10">
               {[
                 { icon: Wind, label: "Breathe" },
                 { icon: Target, label: "Focus" },
                 { icon: Zap, label: "Activate" },
               ].map((s, i) => (
-                <div key={i} className="flex flex-col items-center gap-2">
-                  <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                    <s.icon className="w-6 h-6 text-gray-600" />
+                <div key={i} className="flex flex-col items-center gap-1.5 sm:gap-2">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center">
+                    <s.icon className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
                   </div>
-                  <span className="text-sm text-gray-500">{s.label}</span>
+                  <span className="text-xs sm:text-sm text-gray-500">{s.label}</span>
                 </div>
               ))}
             </div>
@@ -238,9 +238,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setStep("breathing")}
-              className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-lg shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
+              className="w-full py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-base sm:text-lg shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
             >
-              Begin Ritual <ArrowRight className="w-5 h-5" />
+              Begin Ritual <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
           </motion.div>
         )}
@@ -252,21 +252,21 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="text-center px-6 max-w-md"
+            className="text-center px-4 sm:px-6 max-w-md"
           >
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Wind className="w-5 h-5 text-emerald-600" />
-              <p className="text-gray-500 font-medium">Step 1 of 3</p>
+            <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+              <Wind className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <p className="text-gray-500 font-medium text-sm sm:text-base">Step 1 of 3</p>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
               Oxygen Activation
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
               Deep breathing increases metabolic rate
             </p>
 
             {/* Breathing circle */}
-            <div className="relative w-56 h-56 mx-auto mb-8">
+            <div className="relative w-44 h-44 sm:w-56 sm:h-56 mx-auto mb-6 sm:mb-8">
               <motion.div
                 animate={{
                   scale:
@@ -325,27 +325,27 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
                       : 8,
                   ease: "easeInOut",
                 }}
-                className={`absolute inset-12 rounded-full bg-gradient-to-br ${getBreathColor()} flex items-center justify-center shadow-lg`}
+                className={`absolute inset-8 sm:inset-12 rounded-full bg-gradient-to-br ${getBreathColor()} flex items-center justify-center shadow-lg`}
               >
                 <div className="text-center text-white">
-                  <p className="text-4xl font-bold">{timer}</p>
-                  <p className="text-sm opacity-90">{getBreathInstruction()}</p>
+                  <p className="text-3xl sm:text-4xl font-bold">{timer}</p>
+                  <p className="text-xs sm:text-sm opacity-90">{getBreathInstruction()}</p>
                 </div>
               </motion.div>
             </div>
 
             {/* Progress dots */}
-            <div className="flex justify-center gap-3">
+            <div className="flex justify-center gap-2 sm:gap-3">
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className={`w-3 h-3 rounded-full transition-colors ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
                     breathCount >= i ? "bg-emerald-500" : "bg-gray-200"
                   }`}
                 />
               ))}
             </div>
-            <p className="text-gray-500 text-sm mt-2">
+            <p className="text-gray-500 text-xs sm:text-sm mt-2">
               {breathCount}/3 breaths completed
             </p>
           </motion.div>
@@ -358,16 +358,16 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="text-center px-6 max-w-md"
+            className="text-center px-4 sm:px-6 max-w-md"
           >
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Target className="w-5 h-5 text-emerald-600" />
-              <p className="text-gray-500 font-medium">Step 2 of 3</p>
+            <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+              <Target className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <p className="text-gray-500 font-medium text-sm sm:text-base">Step 2 of 3</p>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
               Neural Pathway Activation
             </h2>
-            <p className="text-gray-600 mb-8">Visualize your transformation</p>
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">Visualize your transformation</p>
 
             <motion.div
               animate={{
@@ -378,12 +378,12 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
                 ],
               }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="w-40 h-40 mx-auto mb-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center"
+              className="w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-6 sm:mb-8 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center"
             >
-              <Brain className="w-16 h-16 text-white" />
+              <Brain className="w-12 h-12 sm:w-16 sm:h-16 text-white" />
             </motion.div>
 
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-5 sm:mb-6 leading-relaxed text-sm sm:text-base">
               &ldquo;Close your eyes. See yourself at your goal weight. Feel the
               <span className="text-emerald-600 font-medium"> energy</span>, the
               <span className="text-emerald-600 font-medium"> confidence</span>,
@@ -392,9 +392,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               ...&rdquo;
             </p>
 
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-8">
-              <p className="text-gray-500 text-sm">
-                <Brain className="w-4 h-4 inline mr-1" />
+            <div className="bg-gray-50 border border-gray-200 rounded-lg p-2.5 sm:p-3 mb-6 sm:mb-8">
+              <p className="text-gray-500 text-xs sm:text-sm">
+                <Brain className="w-3.5 h-3.5 sm:w-4 sm:h-4 inline mr-1" />
                 This visualization creates new synaptic connections, priming
                 your autonomic nervous system for metabolic optimization.
               </p>
@@ -404,9 +404,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setStep("metabolism")}
-              className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-lg shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
+              className="w-full py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-base sm:text-lg shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
             >
-              I Can See It <ArrowRight className="w-5 h-5" />
+              I Can See It <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
           </motion.div>
         )}
@@ -418,29 +418,29 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="text-center px-6 max-w-md"
+            className="text-center px-4 sm:px-6 max-w-md"
           >
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Brain className="w-5 h-5 text-emerald-600" />
-              <p className="text-gray-500 font-medium">Step 3 of 3</p>
+            <div className="flex items-center justify-center gap-2 mb-3 sm:mb-4">
+              <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+              <p className="text-gray-500 font-medium text-sm sm:text-base">Step 3 of 3</p>
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
               Subconscious Reprogramming
             </h2>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
               Tap and read each affirmation aloud or silently
             </p>
 
             {/* Instruction box */}
-            <div className="bg-amber-50 border border-amber-200 rounded-lg px-4 py-2 mb-6">
-              <p className="text-amber-800 text-sm">
-                <Sparkles className="w-4 h-4 inline mr-1" />
+            <div className="bg-amber-50 border border-amber-200 rounded-lg px-3 sm:px-4 py-2 mb-4 sm:mb-6">
+              <p className="text-amber-800 text-xs sm:text-sm">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 inline mr-1" />
                 Say the words as you tap — this anchors them in your unconscious
               </p>
             </div>
 
             {/* Affirmation display */}
-            <div className="h-16 mb-4 flex items-center justify-center">
+            <div className="h-14 sm:h-16 mb-3 sm:mb-4 flex items-center justify-center">
               <AnimatePresence mode="wait">
                 {showAffirmation && currentAffirmation && (
                   <motion.p
@@ -448,7 +448,7 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                    className="text-xl font-semibold text-emerald-600 px-4"
+                    className="text-lg sm:text-xl font-semibold text-emerald-600 px-3 sm:px-4"
                   >
                     &ldquo;{currentAffirmation}&rdquo;
                   </motion.p>
@@ -457,7 +457,7 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
                   <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-gray-400 italic"
+                    className="text-gray-400 italic text-sm sm:text-base"
                   >
                     Tap the button to reveal affirmation...
                   </motion.p>
@@ -469,7 +469,7 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={handleMetabolismPulse}
-              className="relative w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-xl shadow-emerald-500/30 active:shadow-emerald-500/50"
+              className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto mb-5 sm:mb-6 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-xl shadow-emerald-500/30 active:shadow-emerald-500/50"
             >
               {pulseCount > 0 && (
                 <motion.div
@@ -481,13 +481,13 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
                 />
               )}
               <div className="text-center z-10">
-                <Zap className="w-12 h-12 text-white mx-auto mb-2" />
-                <span className="text-white font-bold text-lg">TAP!</span>
+                <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-white mx-auto mb-1.5 sm:mb-2" />
+                <span className="text-white font-bold text-base sm:text-lg">TAP!</span>
               </div>
             </motion.button>
 
             {/* Progress bar */}
-            <div className="w-full max-w-xs mx-auto h-3 bg-gray-100 rounded-full overflow-hidden mb-4">
+            <div className="w-full max-w-xs mx-auto h-2.5 sm:h-3 bg-gray-100 rounded-full overflow-hidden mb-3 sm:mb-4">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${metabolismProgress}%` }}
@@ -495,7 +495,7 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               />
             </div>
 
-            <div className="flex justify-center text-sm px-4 max-w-xs mx-auto">
+            <div className="flex justify-center text-xs sm:text-sm px-4 max-w-xs mx-auto">
               <span className="text-gray-500">
                 {pulseCount} taps • {metabolismProgress.toFixed(0)}% complete
               </span>
@@ -510,20 +510,20 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
-            className="text-center px-6 max-w-md"
+            className="text-center px-4 sm:px-6 max-w-md py-8 sm:py-0"
           >
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ type: "spring", damping: 10 }}
-              className="w-20 h-20 mx-auto mb-6 bg-emerald-100 rounded-full flex items-center justify-center"
+              className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-5 sm:mb-6 bg-emerald-100 rounded-full flex items-center justify-center"
             >
-              <CheckCircle className="w-10 h-10 text-emerald-600" />
+              <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-emerald-600" />
             </motion.div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
               Subconscious Activated!
             </h2>
-            <p className="text-gray-600 text-lg mb-2">
+            <p className="text-gray-600 text-base sm:text-lg mb-2">
               You completed{" "}
               <span className="text-emerald-600 font-bold">
                 {pulseCount} neural activations
@@ -531,9 +531,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               — your subconscious is now primed for transformation.
             </p>
 
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-4 mb-6">
-              <p className="text-emerald-800 text-sm leading-relaxed">
-                <Sparkles className="w-4 h-4 inline mr-1" />
+            <div className="bg-emerald-50 border border-emerald-200 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-5 sm:mb-6">
+              <p className="text-emerald-800 text-xs sm:text-sm leading-relaxed">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 inline mr-1" />
                 Your unconscious mind has absorbed today&apos;s programming.
                 Over the next 24 hours, your body will work on weight
                 optimization <strong>without you even thinking about it</strong>
@@ -541,7 +541,7 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               </p>
             </div>
 
-            <p className="text-gray-500 text-sm mb-8">
+            <p className="text-gray-500 text-xs sm:text-sm mb-6 sm:mb-8">
               Return tomorrow to reinforce your neural pathways and maintain
               your transformation streak!
             </p>
@@ -550,9 +550,9 @@ export default function RitualFlow({ onComplete, onClose }: RitualFlowProps) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={onClose}
-              className="w-full py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-lg shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
+              className="w-full py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-base sm:text-lg shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2"
             >
-              View My Progress <ArrowRight className="w-5 h-5" />
+              View My Progress <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
           </motion.div>
         )}

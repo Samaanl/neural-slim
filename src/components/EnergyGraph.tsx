@@ -245,39 +245,39 @@ export default function EnergyGraph({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
+      className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-100 shadow-sm"
     >
       {/* Header */}
       <div className="flex items-center gap-2 mb-2">
-        <Brain className="w-5 h-5 text-emerald-600" />
-        <h2 className="text-xl font-semibold text-gray-900">
+        <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
+        <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
           90-Day Neural Transformation
         </h2>
       </div>
-      <p className="text-gray-500 text-sm mb-6">
+      <p className="text-gray-500 text-xs sm:text-sm mb-4 sm:mb-6">
         Complete the full journey to permanently reprogram your subconscious for
         effortless weight loss
       </p>
 
       {/* Current Phase Banner */}
       <div
-        className={`bg-gradient-to-r from-${phaseInfo.color}-50 to-${phaseInfo.color}-100 border border-${phaseInfo.color}-200 rounded-xl p-4 mb-6`}
+        className={`bg-gradient-to-r from-${phaseInfo.color}-50 to-${phaseInfo.color}-100 border border-${phaseInfo.color}-200 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-0">
           <div>
             <p
-              className={`text-${phaseInfo.color}-800 font-bold text-lg flex items-center gap-2`}
+              className={`text-${phaseInfo.color}-800 font-bold text-base sm:text-lg flex items-center gap-2`}
             >
-              <phaseInfo.icon className="w-5 h-5" />
+              <phaseInfo.icon className="w-4 h-4 sm:w-5 sm:h-5" />
               {phaseInfo.title}
             </p>
-            <p className={`text-${phaseInfo.color}-700 text-sm mt-1`}>
+            <p className={`text-${phaseInfo.color}-700 text-xs sm:text-sm mt-1`}>
               {phaseInfo.description}
             </p>
           </div>
-          <div className="text-right">
+          <div className="text-left sm:text-right">
             <p className="text-xs text-gray-500">Phase</p>
-            <p className={`text-2xl font-bold text-${phaseInfo.color}-600`}>
+            <p className={`text-xl sm:text-2xl font-bold text-${phaseInfo.color}-600`}>
               {phaseInfo.phase}/6
             </p>
           </div>
@@ -285,59 +285,59 @@ export default function EnergyGraph({
       </div>
 
       {/* Main Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-6">
         {/* Days Completed */}
-        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-xl p-4 text-center border border-emerald-100">
-          <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-2">
-            <Target className="w-5 h-5 text-emerald-600" />
+        <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-emerald-100">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <Target className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
           </div>
-          <p className="text-3xl font-bold text-emerald-600">{daysCompleted}</p>
-          <p className="text-xs text-gray-600 font-medium">Days Completed</p>
+          <p className="text-2xl sm:text-3xl font-bold text-emerald-600">{daysCompleted}</p>
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">Days Completed</p>
         </div>
 
         {/* Current Streak */}
-        <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-4 text-center border border-orange-100">
-          <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-2">
-            <Flame className="w-5 h-5 text-orange-600" />
+        <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-orange-100">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <Flame className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600" />
           </div>
-          <p className="text-3xl font-bold text-orange-600">{currentStreak}</p>
-          <p className="text-xs text-gray-600 font-medium">Day Streak</p>
+          <p className="text-2xl sm:text-3xl font-bold text-orange-600">{currentStreak}</p>
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">Day Streak</p>
         </div>
 
         {/* Days to Next Phase */}
-        <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-xl p-4 text-center border border-sky-100">
-          <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center mx-auto mb-2">
-            <Sparkles className="w-5 h-5 text-sky-600" />
+        <div className="bg-gradient-to-br from-sky-50 to-cyan-50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-sky-100">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-sky-100 rounded-lg flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-sky-600" />
           </div>
-          <p className="text-3xl font-bold text-sky-600">
+          <p className="text-2xl sm:text-3xl font-bold text-sky-600">
             {phaseInfo.daysToNext === 0 ? "✓" : phaseInfo.daysToNext}
           </p>
-          <p className="text-xs text-gray-600 font-medium">
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">
             {phaseInfo.daysToNext === 0 ? "Complete!" : "Days to Next"}
           </p>
         </div>
 
         {/* Journey Progress */}
-        <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-4 text-center border border-purple-100">
-          <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-2">
-            <Brain className="w-5 h-5 text-purple-600" />
+        <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-purple-100">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-1 sm:mb-2">
+            <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
           </div>
-          <p className="text-3xl font-bold text-purple-600">
+          <p className="text-2xl sm:text-3xl font-bold text-purple-600">
             {habitProgress.toFixed(0)}%
           </p>
-          <p className="text-xs text-gray-600 font-medium">Journey Complete</p>
+          <p className="text-[10px] sm:text-xs text-gray-600 font-medium">Journey Complete</p>
         </div>
       </div>
 
       {/* Progress Bar to 90 Days */}
-      <div className="mb-6">
-        <div className="flex justify-between items-center mb-2">
-          <span className="text-sm font-medium text-gray-700">
+      <div className="mb-4 sm:mb-6">
+        <div className="flex justify-between items-center mb-1 sm:mb-2">
+          <span className="text-xs sm:text-sm font-medium text-gray-700">
             Full Transformation Progress
           </span>
-          <span className="text-sm text-gray-500">{daysCompleted}/90 days</span>
+          <span className="text-xs sm:text-sm text-gray-500">{daysCompleted}/90 days</span>
         </div>
-        <div className="h-4 bg-gray-100 rounded-full overflow-hidden">
+        <div className="h-3 sm:h-4 bg-gray-100 rounded-full overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${habitProgress}%` }}
@@ -346,30 +346,30 @@ export default function EnergyGraph({
           />
         </div>
         {/* Phase markers */}
-        <div className="flex justify-between mt-1 px-1">
-          <span className="text-xs text-gray-400">Start</span>
-          <span className="text-xs text-gray-400">21d</span>
-          <span className="text-xs text-gray-400">45d</span>
-          <span className="text-xs text-gray-400">66d</span>
-          <span className="text-xs text-gray-400 flex items-center gap-1">
-            90d <Award className="w-3 h-3" />
+        <div className="flex justify-between mt-1 px-0.5 sm:px-1">
+          <span className="text-[10px] sm:text-xs text-gray-400">Start</span>
+          <span className="text-[10px] sm:text-xs text-gray-400">21d</span>
+          <span className="text-[10px] sm:text-xs text-gray-400">45d</span>
+          <span className="text-[10px] sm:text-xs text-gray-400">66d</span>
+          <span className="text-[10px] sm:text-xs text-gray-400 flex items-center gap-0.5 sm:gap-1">
+            90d <Award className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
           </span>
         </div>
       </div>
 
       {/* Next Milestone */}
       {phaseInfo.daysToNext > 0 && (
-        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4 mb-6">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
-              <Target className="w-6 h-6 text-amber-600" />
+        <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-lg sm:rounded-xl p-3 sm:p-4 mb-4 sm:mb-6">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-amber-600" />
             </div>
             <div>
-              <p className="text-amber-800 font-semibold flex items-center gap-2">
-                <Target className="w-4 h-4" />
+              <p className="text-amber-800 font-semibold flex items-center gap-1 sm:gap-2 text-sm sm:text-base">
+                <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                 Next Unlock: {phaseInfo.nextMilestone}
               </p>
-              <p className="text-amber-700 text-sm">
+              <p className="text-amber-700 text-xs sm:text-sm">
                 {phaseInfo.daysToNext} days away — keep your streak going!
               </p>
             </div>
@@ -379,14 +379,14 @@ export default function EnergyGraph({
 
       {/* Chart */}
       {displayData.length > 0 && (
-        <div className="h-48 mb-4">
+        <div className="h-36 sm:h-48 mb-3 sm:mb-4">
           <Line data={chartData} options={options} />
         </div>
       )}
 
       {/* Explanation */}
-      <div className="pt-4 border-t border-gray-100">
-        <p className="text-gray-500 text-xs leading-relaxed">
+      <div className="pt-3 sm:pt-4 border-t border-gray-100">
+        <p className="text-gray-500 text-[10px] sm:text-xs leading-relaxed">
           <strong className="text-gray-700">The Science:</strong> Research shows
           it takes 66-90 days to form permanent behavioral changes. Each phase
           unlocks deeper levels of subconscious reprogramming. The longer you

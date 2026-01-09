@@ -115,33 +115,33 @@ export default function BadgesDisplay({ badges }: BadgesDisplayProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: 0.3 }}
-      className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm"
+      className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-100 shadow-sm"
     >
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center">
-            <Award className="w-5 h-5 text-amber-600" />
+      <div className="flex items-center justify-between mb-4 sm:mb-6">
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-amber-50 rounded-lg flex items-center justify-center">
+            <Award className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600" />
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-gray-900">
+            <h2 className="text-base sm:text-lg font-semibold text-gray-900">
               Achievements
             </h2>
-            <p className="text-sm text-gray-500">
+            <p className="text-xs sm:text-sm text-gray-500">
               {unlockedCount}/{totalCount} unlocked
             </p>
           </div>
         </div>
         {unlockedCount > 0 && (
           <div className="flex items-center gap-1 text-amber-600">
-            <Star className="w-4 h-4 fill-current" />
-            <span className="text-sm font-medium">
+            <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" />
+            <span className="text-xs sm:text-sm font-medium">
               Level {Math.floor(unlockedCount / 2) + 1}
             </span>
           </div>
         )}
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2 sm:gap-3">
         {Object.entries(BADGE_INFO).map(([key, badge]) => {
           const isUnlocked = unlockedSet.has(key);
           const IconComponent = badge.icon;
@@ -151,39 +151,39 @@ export default function BadgesDisplay({ badges }: BadgesDisplayProps) {
             <motion.div
               key={key}
               whileHover={{ scale: 1.05, y: -2 }}
-              className={`group relative p-4 rounded-xl text-center transition-all border cursor-pointer ${
+              className={`group relative p-3 sm:p-4 rounded-lg sm:rounded-xl text-center transition-all border cursor-pointer ${
                 isUnlocked
                   ? "bg-white border-gray-200 shadow-sm hover:shadow-md"
                   : "bg-gray-50 border-gray-100 opacity-60 hover:opacity-80"
               }`}
             >
-              {/* Fun fact tooltip on hover */}
+              {/* Fun fact tooltip on hover - hidden on mobile */}
               {isUnlocked && (
-                <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
+                <div className="hidden sm:block absolute -top-12 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
                   {badge.funFact}
                   <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
                 </div>
               )}
 
               <div
-                className={`w-12 h-12 mx-auto mb-3 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 ${
+                className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 sm:mb-3 rounded-lg sm:rounded-xl flex items-center justify-center transition-transform group-hover:scale-110 ${
                   isUnlocked ? colorClasses[1] : "bg-gray-100"
                 }`}
               >
                 {isUnlocked ? (
-                  <IconComponent className={`w-6 h-6 ${colorClasses[0]}`} />
+                  <IconComponent className={`w-5 h-5 sm:w-6 sm:h-6 ${colorClasses[0]}`} />
                 ) : (
-                  <Lock className="w-5 h-5 text-gray-400" />
+                  <Lock className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
                 )}
               </div>
               <p
-                className={`text-sm font-medium ${
+                className={`text-xs sm:text-sm font-medium ${
                   isUnlocked ? "text-gray-900" : "text-gray-500"
                 }`}
               >
                 {badge.title}
               </p>
-              <p className="text-xs text-gray-400 mt-1">{badge.description}</p>
+              <p className="text-[10px] sm:text-xs text-gray-400 mt-0.5 sm:mt-1 line-clamp-2">{badge.description}</p>
             </motion.div>
           );
         })}
