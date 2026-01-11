@@ -386,7 +386,7 @@ export default function EnergyGraph({
                 Next Unlock: {phaseInfo.nextMilestone}
               </p>
               <p className="text-amber-700 text-xs sm:text-sm">
-                {phaseInfo.daysToNext} days away — keep your streak going!
+                {phaseInfo.daysToNext} days away keep your streak going!
               </p>
             </div>
           </div>

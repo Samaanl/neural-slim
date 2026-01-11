@@ -53,16 +53,16 @@ export default function Dashboard() {
   const ritualCompleted = todayLog?.ritualCompleted || false;
 
   const tips = [
-    "Your subconscious mind doesn't distinguish between real and imagined experiences — visualization creates the same neural patterns as actual weight loss.",
+    "Your subconscious mind doesn't distinguish between real and imagined experiences visualization creates the same neural patterns as actual weight loss.",
     "The affirmations you read during tapping bypass your conscious mind's resistance and embed directly into your unconscious programming.",
     "Each tap creates a kinesthetic anchor, linking the physical sensation to the affirmation. Your body remembers what your mind forgets.",
     "After 21 consecutive days, your Reticular Activating System (RAS) will automatically filter for opportunities aligned with your weight loss goal.",
     "The breathing exercises lower cortisol (stress hormone), which directly reduces belly fat storage and increases metabolic efficiency.",
-    "Your parasympathetic nervous system activation during the ritual puts your body in 'rest and digest' mode — optimal for fat metabolism.",
+    "Your parasympathetic nervous system activation during the ritual puts your body in 'rest and digest' mode optimal for fat metabolism.",
     "Consistency is neuroplasticity in action. Each ritual strengthens the neural pathways that support effortless weight management.",
     "The psychosomatic connection means your beliefs physically alter your hormone levels, metabolic rate, and cellular processes.",
-    "Your unconscious mind processes 11 million bits of information per second — it's working on your goals even when you're not thinking about them.",
-    "The tap-and-affirm technique is based on neuro-linguistic programming (NLP) — the same methods used by elite athletes and executives.",
+    "Your unconscious mind processes 11 million bits of information per second it's working on your goals even when you're not thinking about them.",
+    "The tap-and-affirm technique is based on neuro-linguistic programming (NLP) the same methods used by elite athletes and executives.",
   ];
 
   return (
@@ -408,7 +408,7 @@ export default function Dashboard() {
                   if (navigator.share) {
                     navigator.share({
                       title: "NeuralSlim",
-                      text: "Lose weight with neural reprogramming - just 2 minutes a day!",
+                      text: "Lose weight with neural reprogramming just 2 minutes a day!",
                       url: window.location.href,
                     });
                   }

@@ -437,7 +437,7 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
                 location: "Los Angeles, CA",
                 lost: "18 lbs",
                 quote:
-                  "I was super skeptical at first - how can tapping and affirmations help me lose weight? But after doing it for just 2 weeks, something clicked. My cravings started disappearing on their own. By day 30, my mind was automatically making healthier choices without me even trying!",
+                  "I was super skeptical at first how can tapping and affirmations help me lose weight? But after doing it for just 2 weeks, something clicked. My cravings started disappearing on their own. By day 30, my mind was automatically making healthier choices without me even trying!",
                 initials: "SM",
               },
               {
