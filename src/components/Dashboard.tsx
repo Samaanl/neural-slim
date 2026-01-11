@@ -123,7 +123,7 @@ export default function Dashboard() {
                       <p className="text-gray-600 text-sm leading-relaxed">
                         Your brain forms new neural pathways through repetitive
                         actions. The tap-and-affirm technique creates
-                        <strong> neuro-associative conditioning</strong> —
+                        <strong> neuro-associative conditioning</strong>
                         linking the physical action with positive affirmations,
                         encoding them directly into your subconscious mind.
                       </p>
@@ -142,9 +142,9 @@ export default function Dashboard() {
                         The mind-body connection is scientifically documented.
                         When your unconscious mind accepts a belief, your{" "}
                         <strong>autonomic nervous system</strong> adjusts
-                        physiological processes — including metabolic rate,
-                        cortisol levels, and hormonal balance — without
-                        conscious effort.
+                        physiological processes including metabolic rate,
+                        cortisol levels, and hormonal balance without conscious
+                        effort.
                       </p>
                     </div>
                   </div>
@@ -159,11 +159,10 @@ export default function Dashboard() {
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
                         The tapping action serves as a{" "}
-                        <strong>kinesthetic anchor</strong> — a technique used
-                        in neuro-linguistic programming (NLP). This physical
-                        motion &quot;locks in&quot; the affirmations, making
-                        them more accessible to your subconscious throughout the
-                        day.
+                        <strong>kinesthetic anchor</strong> a technique used in
+                        neuro-linguistic programming (NLP). This physical motion
+                        &quot;locks in&quot; the affirmations, making them more
+                        accessible to your subconscious throughout the day.
                       </p>
                     </div>
                   </div>
@@ -195,8 +194,8 @@ export default function Dashboard() {
                         Reticular Activating System (RAS)
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Daily rituals program your <strong>RAS</strong> — the
-                        brain&apos;s filtering system — to notice opportunities
+                        Daily rituals program your <strong>RAS</strong> the
+                        brain&apos;s filtering system to notice opportunities
                         and make choices aligned with your weight loss goals.
                         Your subconscious starts working toward your goal 24/7,
                         even when you&apos;re not thinking about it.
@@ -211,7 +210,7 @@ export default function Dashboard() {
                     <strong>The Key:</strong> Consistency. Each ritual
                     reinforces neural pathways, making the subconscious
                     programming stronger. After 21 days, these patterns become
-                    automatic — your body works toward weight loss without
+                    automatic your body works toward weight loss without
                     conscious effort.
                   </p>
                 </div>

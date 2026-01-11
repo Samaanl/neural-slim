@@ -408,7 +408,7 @@ export default function EnergyGraph({
           unlocks deeper levels of subconscious reprogramming. The longer you
           continue, the more automatic and effortless your transformation
           becomes.{" "}
-          <strong>Breaking your streak resets your neural progress</strong> —
+          <strong>Breaking your streak resets your neural progress</strong>
           consistency is everything!
         </p>
       </div>

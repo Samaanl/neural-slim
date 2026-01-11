@@ -520,7 +520,7 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
               {
                 icon: Heart,
                 title: "Parasympathetic Activation",
-                desc: "Controlled breathing activates your vagus nerve, shifting from 'fight or flight' to 'rest and digest' — reducing cortisol and optimizing fat metabolism.",
+                desc: "Controlled breathing activates your vagus nerve, shifting from 'fight or flight' to 'rest and digest' reducing cortisol and optimizing fat metabolism.",
               },
               {
                 icon: Target,
@@ -530,7 +530,7 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
               {
                 icon: BarChart3,
                 title: "Reticular Activating System",
-                desc: "Daily rituals program your RAS — the brain's attention filter — to unconsciously notice opportunities and make choices aligned with your weight goals.",
+                desc: "Daily rituals program your RAS the brain's attention filter to unconsciously notice opportunities and make choices aligned with your weight goals.",
               },
               {
                 icon: Zap,
@@ -557,7 +557,7 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
             <p className="text-emerald-100 text-xs sm:text-sm text-center">
               <strong className="text-white">The Key Insight:</strong> Your
               unconscious mind controls 95% of your behavior. By programming it
-              correctly, weight loss becomes automatic — your body works toward
+              correctly, weight loss becomes automatic your body works toward
               your goal without conscious effort.
             </p>
           </div>
@@ -578,7 +578,7 @@ export default function LandingHero({ onStart }: LandingHeroProps) {
           onClick={onStart}
           className="px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl text-base sm:text-lg shadow-lg shadow-emerald-500/25 inline-flex items-center gap-2"
         >
-          Start Now — It&apos;s Free{" "}
+          Start Now It&apos;s Free{" "}
           <ArrowRight className="w-4 sm:w-5 h-4 sm:h-5" />
         </motion.button>
       </section>
